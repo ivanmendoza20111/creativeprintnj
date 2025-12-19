@@ -2,19 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Instagram Section</title>
+  <title>CreativeprintNJ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- CSS mínimo para que se vea bien -->
+  <!-- CSS mínimo -->
   <style>
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
     }
 
+    /* ===== SECCIÓN INSTAGRAM (TUYA) ===== */
     .elementor-section {
       background: #f7f7fb;
-      padding: 20px 0;
+      padding: 0px 0;
       text-align: center;
     }
 
@@ -30,10 +31,101 @@
     a {
       text-decoration: none;
     }
+
+    /* ===== SECCIÓN LOGO (NUEVA) ===== */
+    .logo-section {
+      background: #ffffff;
+      padding: 30px 0;
+      border-top: 1px solid #eee;
+      text-align: center;
+    }
+
+    .logo-section img {
+      max-width: 220px;
+      width: 100%;
+      height: auto;
+    }
+
+		/* ===== FACILPRINT CATEGORIES ===== */
+.fp-categories {
+  padding: 0px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.fp-title {
+  font-size: 32px;
+  margin-bottom: 25px;
+}
+
+.fp-title span {
+  color: #5b2dff;
+}
+
+.fp-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.fp-tab {
+  border: none;
+  background: none;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-bottom: 2px solid transparent;
+}
+
+.fp-tab.active {
+  border-color: #5b2dff;
+  color: #5b2dff;
+}
+
+.fp-tab-content {
+  display: none;
+}
+
+.fp-tab-content.active {
+  display: block;
+}
+
+.fp-products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.fp-card {
+  border: 1px solid #eee;
+  padding: 20px;
+  transition: transform .2s ease;
+}
+
+.fp-card:hover {
+  transform: translateY(-5px);
+}
+
+.fp-card img {
+  width: 100%;
+  max-width: 260px;
+  margin-bottom: 15px;
+}
+
+.fp-card h3 {
+  margin: 10px 0 5px;
+}
+
   </style>
 </head>
+
 <body>
 
+<!-- ===== TU SECCIÓN ORIGINAL (NO TOCADA) ===== -->
 <div class="elementor-section elementor-top-section elementor-element elementor-element-75e2ade elementor-section-content-middle elementor-section-stretched elementor-section-boxed elementor-section-height-default elementor-section-height-default"
      data-id="75e2ade"
      data-element_type="section"
@@ -67,6 +159,90 @@
     </div>
   </div>
 </div>
+
+<!-- ===== NUEVA SECCIÓN DEBAJO: LOGO CENTRADO ===== -->
+<div class="logo-section">
+  <a href="#">
+    <img
+      src="./img/logo.jpeg"
+      alt="Facilprint Logo">
+  </a>
+</div>
+
+<!-- ================== CATEGORIES SECTION ================== -->
+<section class="fp-categories">
+  <h2 class="fp-title">
+    Explore our <span>Categories</span>
+  </h2>
+
+  <!-- Tabs -->
+  <div class="fp-tabs">
+    <button class="fp-tab active" data-tab="cards">Business Cards</button>
+    <button class="fp-tab" data-tab="stickers">Stickers</button>
+    <button class="fp-tab" data-tab="flyers">Flyers</button>
+    <button class="fp-tab" data-tab="large">Large Format</button>
+  </div>
+
+  <!-- Content -->
+  <div class="fp-tab-content active" id="cards">
+    <div class="fp-products">
+      <div class="fp-card">
+        <img src="https://facilprint.com/wp-content/uploads/2025/08/6757987_3404803-1-450x450.jpg">
+        <h3>Business Cards</h3>
+        <p>From $60.00</p>
+      </div>
+
+      <div class="fp-card">
+        <img src="https://facilprint.com/wp-content/uploads/2025/08/34586097_98-2.jpg">
+        <h3>Premium Cards</h3>
+        <p>From $200.00</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fp-tab-content" id="stickers">
+    <div class="fp-products">
+      <div class="fp-card">
+        <img src="https://facilprint.com/wp-content/uploads/2025/08/73544527_M003T0906-B-sticker-mockup-21Sep23-450x450.jpg">
+        <h3>Stickers</h3>
+        <p>From $100.00</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fp-tab-content" id="flyers">
+    <div class="fp-products">
+      <div class="fp-card">
+        <img src="https://facilprint.com/wp-content/uploads/2025/08/7607295_3614860-1-450x450.jpg">
+        <h3>Flyers</h3>
+        <p>From $220.00</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fp-tab-content" id="large">
+    <div class="fp-products">
+      <div class="fp-card">
+        <img src="https://facilprint.com/wp-content/uploads/2025/09/89399000_6041-450x450.jpg">
+        <h3>Banner</h3>
+        <p>From $60.00</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.fp-tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.fp-tab').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.fp-tab-content').forEach(c => c.classList.remove('active'));
+
+      btn.classList.add('active');
+      document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+  });
+</script>
+
 
 </body>
 </html>
