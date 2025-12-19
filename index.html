@@ -120,6 +120,170 @@
   margin: 10px 0 5px;
 }
 
+
+/* ===== FEATURE SECTION ===== */
+.feature-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  padding: 80px 20px;
+  gap: 40px;
+}
+
+.feature-image-wrapper {
+  position: relative;
+}
+
+.feature-main-image {
+  width: 100%;
+  max-width: 520px;
+}
+
+.feature-decor {
+  position: absolute;
+  width: 90px;
+}
+
+.decor-1 {
+  top: -20px;
+  left: -30px;
+}
+
+.decor-2 {
+  bottom: -20px;
+  right: -20px;
+}
+
+.feature-text {
+  text-align: left;
+}
+
+.feature-number {
+  font-size: 64px;
+  color: #e5e5ef;
+  margin-bottom: 10px;
+}
+
+.feature-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.feature-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.feature-button {
+  font-weight: bold;
+  color: #5b2dff;
+  text-decoration: none;
+  transition: transform .2s ease;
+}
+
+.feature-button:hover {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .feature-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .feature-text {
+    text-align: center;
+  }
+
+  .feature-decor {
+    display: none;
+  }
+}
+
+/* ===== BEST SELLERS ===== */
+.best-sellers {
+  padding: 0px 20px;
+  background: #fff;
+  text-align: center;
+}
+
+.best-sellers-header {
+  max-width: 700px;
+  margin: 0 auto 60px;
+}
+
+.bs-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.bs-description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #666;
+}
+
+/* Carousel layout */
+.bs-carousel {
+  display: flex;
+  gap: 40px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  scroll-snap-type: x mandatory;
+	justify-content: center;  
+}
+
+.bs-carousel::-webkit-scrollbar {
+  height: 6px;
+}
+
+.bs-carousel::-webkit-scrollbar-thumb {
+  background: #ddd;
+  border-radius: 10px;
+}
+
+.bs-item {
+  min-width: 300px;
+  scroll-snap-align: center;
+  transition: transform .25s ease;
+}
+
+.bs-item:hover {
+  transform: translateY(-8px);
+}
+
+.bs-item img {
+  width: 100%;
+  max-width: 320px;
+  margin-bottom: 20px;
+}
+
+.bs-item h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.bs-price {
+  font-weight: bold;
+  color: #5b2dff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .bs-title {
+    font-size: 38px;
+  }
+
+  .bs-item {
+    min-width: 260px;
+  }
+}
+
+
   </style>
 </head>
 
@@ -230,6 +394,99 @@
     </div>
   </div>
 </section>
+
+<!-- ================== FEATURE SECTION ================== -->
+<div class="elementor-section elementor-top-section elementor-element elementor-element-ebcb666 elementor-section-stretched elementor-section-boxed"
+     data-id="ebcb666"
+     data-element_type="section">
+
+  <div class="elementor-container elementor-column-gap-no feature-container">
+
+    <!-- IMAGE COLUMN -->
+    <div class="elementor-column elementor-col-50 elementor-top-column">
+      <div class="elementor-widget-wrap elementor-element-populated feature-image-wrapper">
+        <img
+          src="https://facilprint.com/wp-content/uploads/2025/08/Business-Card-Mockup.png"
+          alt="Business Cards"
+          class="feature-main-image">
+
+        <!-- decorative images -->
+        <img class="feature-decor decor-1"
+             src="https://facilprint.com/wp-content/uploads/2023/02/h4_img7.png"
+             alt="">
+        <img class="feature-decor decor-2"
+             src="https://facilprint.com/wp-content/uploads/2023/02/h4_img9.png"
+             alt="">
+      </div>
+    </div>
+
+    <!-- TEXT COLUMN -->
+    <div class="elementor-column elementor-col-50 elementor-top-column">
+      <div class="elementor-widget-wrap elementor-element-populated feature-text">
+
+        <h2 class="feature-number">01</h2>
+
+        <h2 class="feature-title">
+          Standard Business Cards!
+        </h2>
+
+        <p class="feature-description">
+          Our Standard Business Cards offer classic or premium finishes: regular,
+          matte, glossy, silk, suede, recycled, and more, designed to make a
+          lasting impression.
+        </p>
+
+        <!-- <a class="feature-button"
+           href="https://facilprint.com/product/business-cards/">
+          Discover more →
+        </a> -->
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ================== BEST SELLERS ================== -->
+<section class="best-sellers">
+
+  <div class="best-sellers-header">
+    <h2 class="bs-title">Best sellers</h2>
+    <p class="bs-description">
+      There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+    </p>
+  </div>
+	
+  <div class="bs-carousel">
+    <div class="bs-item">
+      <img src="https://facilprint.com/wp-content/uploads/2025/09/89399000_6041-450x450.jpg">
+      <h3>Banner</h3>
+      <span class="bs-price">From $60.00</span>
+    </div>
+
+    <div class="bs-item">
+      <img src="https://facilprint.com/wp-content/uploads/2025/08/73544527_M003T0906-B-sticker-mockup-21Sep23-450x450.jpg">
+      <h3>Stickers</h3>
+      <span class="bs-price">From $100.00</span>
+    </div>
+
+    <div class="bs-item">
+      <img src="https://facilprint.com/wp-content/uploads/2025/08/7607295_3614860-1-450x450.jpg">
+      <h3>Flyers</h3>
+      <span class="bs-price">From $220.00</span>
+    </div>
+
+    <div class="bs-item">
+      <img src="https://facilprint.com/wp-content/uploads/2025/08/34586097_98-2.jpg">
+      <h3>Premium Business Cards</h3>
+      <span class="bs-price">From $200.00</span>
+    </div>
+  </div>
+
+</section>
+
+
 
 <script>
   document.querySelectorAll('.fp-tab').forEach(btn => {
