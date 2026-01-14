@@ -176,3 +176,7 @@ img{max-width:100%;display:block}
 .cat__info{padding:12px 14px}
 .cat__info h3{margin:0 0 4px}
 .cat__info span{color:var(--muted);font-size:14px}
+
+.topcolor {
+  background-color: black;
+}
