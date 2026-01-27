@@ -17,14 +17,12 @@
     }
 
     /* ===== SECCIÓN INSTAGRAM ===== */
-    /* Esta clase general ponía el fondo azul y el padding */
     .elementor-section {
-      background: #daf1f6;
+      background: #F5F5F5;
       padding: 3.5px;
       text-align: center;
     }
 
-    /* FIX: Forzamos a la sección Feature (por su ID) a ser gris y sin padding externo */
     .elementor-element-ebcb666 {
       background: #f5f7fa !important;
       padding: 0 !important;
@@ -45,7 +43,7 @@
 
     /* ===== SECCIÓN LOGO ===== */
     .logo-section {
-      background: white;
+      background: F9F6F0;
       padding: 0;
       border-top: 1px solid #eee;
       text-align: center;
@@ -80,9 +78,9 @@
     /* ===== FACILPRINT CATEGORIES ===== */
     .fp-categories {
       padding: 0px 20px;
-      background: #f5f7fa;
+      background: #F5F5F5;
       text-align: center;
-      padding-top: 70px;
+      padding-top: 20px;
     }
 
     .fp-title {
@@ -99,6 +97,8 @@
 
     .texttopexplore {
       margin: 0;
+      padding-top: 25px;
+      padding-bottom: 1px;
     }
 
     .fp-tabs {
@@ -118,6 +118,7 @@
       padding: 10px 30px;
       border-bottom: 2px solid transparent;
       text-transform: uppercase;
+      font-size: 14px; /* Ajuste leve para que quepan todos */
     }
 
     .fp-tab.active {
@@ -137,12 +138,13 @@
       display: flex;
       flex-direction: row;
       justify-content: center;
-      gap: 0;
+      gap: 20px; /* Agregué un poco de espacio entre tarjetas */
       max-width: 1200px;
       margin: auto;
+      flex-wrap: wrap; 
     }
 
-    /* TARJETAS DE ARRIBA */
+    /* TARJETAS DE ARRIBA (CATEGORÍAS) */
     .fp-card {
       padding: 20px;
       color: black;
@@ -150,9 +152,12 @@
       transition: background-color 0.4s ease, box-shadow 0.4s ease;
     }
 
+    /* --- CAMBIO SOLICITADO 1: TAMAÑO UNIFORME ARRIBA --- */
     .fp-card img {
       width: 100%;
       max-width: 300px;
+      height: 300px; /* Altura fija */
+      object-fit: cover; /* Recorte inteligente */
       margin-bottom: 15px;
       border-radius: 10%;
     }
@@ -169,7 +174,7 @@
 
     /* ===== FEATURE SECTION ===== */
     .feature-container {
-      background: #f5f7fa;
+      background: #F5F5F5;
       max-width: 1200px;
       margin: auto;
       display: flex;
@@ -253,18 +258,14 @@
       .feature-decor {
         display: none;
       }
-
-
     }
 
 
 
-    /* ===== BEST SELLERS (CORREGIDO FINAL) ===== */
+    /* ===== BEST SELLERS ===== */
     .best-sellers {
-      /* CORRECCIÓN AQUÍ: Se agregó padding superior de 60px.
-         Esto atrapa el margen del título y elimina la línea blanca. */
       padding: 60px 20px 0px 20px;
-      background: #f5f7fa;
+      background: #F5F5F5;
       text-align: center;
     }
 
@@ -275,7 +276,6 @@
 
     .bs-title {
       font-size: 45px;
-      /* Aseguramos que el margen superior sea 0 por si acaso */
       margin-top: 0;
       margin-bottom: 20px;
     }
@@ -317,9 +317,12 @@
       box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15);
     }
 
+    /* --- IMÁGENES BEST SELLERS --- */
     .bs-item img {
       width: 100%;
       max-width: 320px;
+      height: 300px; 
+      object-fit: cover; 
       margin-bottom: 20px;
       border-radius: 10px;
     }
@@ -347,7 +350,7 @@
 
     /* ================= FOOTER ================= */
     .site-footer {
-      background: #f5f7fa;
+      background: #F5F5F5;
       padding: 80px 20px 30px;
       font-size: 15px;
     }
@@ -516,13 +519,6 @@
     </a>
   </div>
 
-  <div class="debajologo">
-    <p> Home </p>
-    <p> Shop </p>
-    <p> Services </p>
-    <p> Contact </p>
-  </div>
-
   <section class="fp-categories">
     <div class="texttopexplore">
       <h2 class="fp-title">Explore our</h2>
@@ -533,13 +529,15 @@
       <button class="fp-tab active" data-tab="cards">Business Cards</button>
       <button class="fp-tab" data-tab="stickers">Stickers</button>
       <button class="fp-tab" data-tab="flyers">Flyers</button>
-      <button class="fp-tab" data-tab="large">Large Format</button>
+      <button class="fp-tab" data-tab="acrylic">Acrylic Signs</button>
+      <button class="fp-tab" data-tab="menus">Menus</button>
+      <button class="fp-tab" data-tab="brochures">Brochure</button>
     </div>
 
     <div class="fp-tab-content active" id="cards">
       <div class="fp-products">
         <div class="fp-card">
-          <img src="./img/cards3.jpeg" width="100px" height="300px">
+          <img src="./img/4.jpeg">
           <p>Business Cards</p>
           <h3>From $60.00</h3>
         </div>
@@ -555,9 +553,13 @@
     <div class="fp-tab-content" id="stickers">
       <div class="fp-products">
         <div class="fp-card">
-          <img
-            src="https://facilprint.com/wp-content/uploads/2025/08/73544527_M003T0906-B-sticker-mockup-21Sep23-450x450.jpg">
+          <img src="./img/Stickers.jpeg">
           <h3>Stickers</h3>
+          <p>From $100.00</p>
+        </div>
+        <div class="fp-card">
+          <img src="./img/Stickers2.5.jpeg">
+          <h3>Stickers 2.5</h3>
           <p>From $100.00</p>
         </div>
       </div>
@@ -566,22 +568,41 @@
     <div class="fp-tab-content" id="flyers">
       <div class="fp-products">
         <div class="fp-card">
-          <img src="https://facilprint.com/wp-content/uploads/2025/08/7607295_3614860-1-450x450.jpg">
+          <img src="./img/Flyer.jpeg">
           <h3>Flyers</h3>
           <p>From $220.00</p>
         </div>
       </div>
     </div>
 
-    <div class="fp-tab-content" id="large">
+    <div class="fp-tab-content" id="acrylic">
       <div class="fp-products">
         <div class="fp-card">
-          <img src="https://facilprint.com/wp-content/uploads/2025/09/89399000_6041-450x450.jpg">
-          <h3>Banner</h3>
+          <img src="./img/Acrylicsigns.jpeg">
+          <h3>Acrylic Signs</h3>
           <p>From $60.00</p>
         </div>
       </div>
     </div>
+
+    <div class="fp-tab-content" id="menus">
+      <div class="fp-products">
+        <div class="fp-card">
+          <img src="./img/Menu.jpeg"> <h3>Restaurant Menus</h3>
+          <p>From $150.00</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="fp-tab-content" id="brochures">
+      <div class="fp-products">
+        <div class="fp-card">
+          <img src="./img/BROCHURE.jpeg"> <h3>Brochures</h3>
+          <p>From $120.00</p>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <div
@@ -633,26 +654,25 @@
 
     <div class="bs-carousel">
       <div class="bs-item">
-        <img src="https://facilprint.com/wp-content/uploads/2025/09/89399000_6041-450x450.jpg">
-        <h3>Banner</h3>
+        <img src="./img/Acrylicsigns.jpeg">
+        <h3>Acrylic Signs</h3>
         <span class="bs-price">From $60.00</span>
       </div>
 
       <div class="bs-item">
-        <img
-          src="https://facilprint.com/wp-content/uploads/2025/08/73544527_M003T0906-B-sticker-mockup-21Sep23-450x450.jpg">
+        <img src="./img/Stickers.jpeg">
         <h3>Stickers</h3>
         <span class="bs-price">From $100.00</span>
       </div>
 
       <div class="bs-item">
-        <img src="https://facilprint.com/wp-content/uploads/2025/08/7607295_3614860-1-450x450.jpg">
+        <img src="./img/Flyer.jpeg">
         <h3>Flyers</h3>
         <span class="bs-price">From $220.00</span>
       </div>
 
       <div class="bs-item">
-        <img src="https://facilprint.com/wp-content/uploads/2025/08/34586097_98-2.jpg">
+        <img src="./img/cards4.jpeg">
         <h3>Premium Business Cards</h3>
         <span class="bs-price">From $200.00</span>
       </div>
@@ -688,7 +708,7 @@
 
     <div class="footer-bottom">
       <div class="footer-copy">
-        © 2025 <a href="https://facilprint.com/">Facilprint</a>. All rights reserved
+        © 2025 <a href="https://facilprint.com/">Creative Print</a>. All rights reserved
       </div>
 
       <div class="footer-payments">
