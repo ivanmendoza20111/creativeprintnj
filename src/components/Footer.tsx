@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { asset } from "@/lib/basePath";
 
 export default function Footer() {
   const year = new Date().getFullYear();
@@ -8,11 +8,10 @@ export default function Footer() {
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12">
         {/* Brand */}
         <div className="text-left max-md:text-center">
-          <Image
-            src="/img/logo.jpeg"
+          <img
+            src={asset("/img/logo.jpeg")}
             alt="CreativePrint NJ Logo"
             width={140}
-            height={56}
             className="rounded-lg mb-5 max-md:mx-auto"
           />
           <p className="leading-relaxed mb-6">
@@ -108,11 +107,10 @@ export default function Footer() {
           &copy; {year} Creative Print NJ. All rights reserved
         </div>
         <div>
-          <Image
+          <img
             src="https://facilprint.com/wp-content/uploads/2023/02/payment-1.png"
             alt="Accepted Payments"
             width={220}
-            height={30}
             className="opacity-60 hover:opacity-100 transition-opacity"
           />
         </div>

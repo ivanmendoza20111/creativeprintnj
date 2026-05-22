@@ -1,4 +1,3 @@
-import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
 
 export default function Feature() {
@@ -7,11 +6,9 @@ export default function Feature() {
       <div className="max-w-[1200px] mx-auto flex items-center py-20 px-5 gap-15 flex-col md:flex-row">
         <ScrollReveal className="flex-1 relative">
           <div className="absolute w-[200px] h-[200px] bg-[radial-gradient(circle,rgba(124,58,237,0.15),transparent_70%)] -top-10 -left-10 rounded-full" />
-          <Image
+          <img
             src="https://facilprint.com/wp-content/uploads/2025/08/Business-Card-Mockup.png"
             alt="Business Cards"
-            width={520}
-            height={400}
             className="w-full max-w-[520px] rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.12)]"
           />
         </ScrollReveal>

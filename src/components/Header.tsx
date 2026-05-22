@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { asset } from "@/lib/basePath";
 
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -21,13 +21,11 @@ export default function Header() {
     >
       <div className="max-w-[1200px] mx-auto flex flex-col items-center gap-3 py-4 px-5">
         <Link href="/">
-          <Image
-            src="/img/logo.jpeg"
+          <img
+            src={asset("/img/logo.jpeg")}
             alt="CreativePrint NJ Logo"
             width={150}
-            height={60}
             className="h-auto"
-            priority
           />
         </Link>
         <nav className="flex gap-6">

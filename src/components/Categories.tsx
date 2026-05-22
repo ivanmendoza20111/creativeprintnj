@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { useState } from "react";
 import ScrollReveal from "./ScrollReveal";
+import { asset } from "@/lib/basePath";
 
 const tabs = [
   { key: "cards", label: "Business Cards" },
@@ -82,11 +82,9 @@ export default function Categories() {
             key={product.name}
             className="bg-white p-4 rounded-2xl border border-black/[0.04] cursor-pointer max-w-[340px] transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
           >
-            <Image
-              src={product.img}
+            <img
+              src={asset(product.img)}
               alt={product.name}
-              width={300}
-              height={300}
               className="w-full max-w-[300px] h-[300px] object-cover rounded-2xl mb-4"
             />
             <p className="text-[#64748b] text-sm mb-1">{product.name}</p>

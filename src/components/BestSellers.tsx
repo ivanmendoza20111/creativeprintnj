@@ -1,5 +1,5 @@
-import Image from "next/image";
 import ScrollReveal from "./ScrollReveal";
+import { asset } from "@/lib/basePath";
 
 const items = [
   { img: "/img/Acrylicsigns.jpeg", name: "Acrylic Signs", price: "From $60.00" },
@@ -30,11 +30,9 @@ export default function BestSellers() {
               key={item.name}
               className="min-w-[280px] max-w-[300px] p-4 rounded-2xl bg-white border border-black/[0.04] cursor-pointer transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
             >
-              <Image
-                src={item.img}
+              <img
+                src={asset(item.img)}
                 alt={item.name}
-                width={300}
-                height={280}
                 className="w-full h-[280px] object-cover rounded-2xl mb-4"
               />
               <h3 className="text-[17px] font-bold mb-2">{item.name}</h3>
