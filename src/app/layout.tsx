@@ -12,7 +12,11 @@ export const metadata: Metadata = {
   description:
     "Business cards, stickers, flyers, acrylic signs and more. High quality prints with fast turnaround in Passaic, NJ.",
   icons: {
-    icon: "/img/logopestana.jpg",
+    icon: [
+      { url: "/favicon-32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16.png", sizes: "16x16", type: "image/png" },
+    ],
+    apple: "/apple-icon.png",
   },
 };
 
