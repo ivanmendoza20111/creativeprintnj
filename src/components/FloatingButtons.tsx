@@ -28,7 +28,7 @@ export default function FloatingButtons() {
       <button
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Back to top"
-        className={`fixed bottom-6 right-[90px] w-11 h-11 bg-[rgba(124,58,237,0.9)] backdrop-blur-sm rounded-full flex items-center justify-center text-white text-lg z-50 border-none cursor-pointer hover:-translate-y-1 hover:bg-[#7c3aed] transition-all ${
+        className={`fixed bottom-6 right-[90px] w-11 h-11 bg-gradient-to-r from-cyan to-pink backdrop-blur-sm rounded-full flex items-center justify-center text-white text-lg z-50 border-none cursor-pointer hover:-translate-y-1 transition-all ${
           showTop ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >

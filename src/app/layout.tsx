@@ -30,7 +30,7 @@ export default function RootLayout({
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         />
       </head>
-      <body className="font-sans bg-[#fafafa] text-[#1a1a2e] antialiased">
+      <body className="font-sans text-[#1a1a2e] antialiased">
         {children}
       </body>
     </html>

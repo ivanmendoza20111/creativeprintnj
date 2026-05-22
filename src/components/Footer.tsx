@@ -4,12 +4,12 @@ export default function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-gradient-to-br from-[#1a1a2e] to-[#16213e] pt-20 pb-8 px-5 text-[15px] text-[#94a3b8]" id="contact">
+    <footer className="bg-gradient-to-br from-[#0F2137] to-[#162a45] pt-20 pb-8 px-5 text-[15px] text-[#94a3b8]" id="contact">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12">
         {/* Brand */}
         <div className="text-left max-md:text-center">
           <img
-            src={asset("/img/logo.jpeg")}
+            src={asset("/img/logo.png")}
             alt="CreativePrint NJ Logo"
             width={140}
             className="rounded-lg mb-5 max-md:mx-auto"
@@ -34,7 +34,7 @@ export default function Footer() {
                 target={social.href.startsWith("http") ? "_blank" : undefined}
                 rel={social.href.startsWith("http") ? "noopener noreferrer" : undefined}
                 aria-label={social.icon.split("-").pop()}
-                className="w-10 h-10 rounded-xl bg-white/[0.08] flex items-center justify-center text-[#94a3b8] hover:bg-gradient-to-br hover:from-[#7c3aed] hover:to-[#6366f1] hover:text-white hover:-translate-y-1 transition-all"
+                className="w-10 h-10 rounded-xl bg-white/[0.08] flex items-center justify-center text-[#94a3b8] hover:bg-gradient-to-r hover:from-cyan hover:via-pink hover:to-orange hover:text-white hover:-translate-y-1 transition-all"
               >
                 <i className={social.icon} />
               </a>
@@ -48,7 +48,7 @@ export default function Footer() {
           <ul className="space-y-3">
             {["Business Cards", "Stickers", "Flyers", "Acrylic Signs"].map((item) => (
               <li key={item}>
-                <a href="#categories" className="hover:text-[#a78bfa] transition-colors">
+                <a href="#categories" className="hover:text-cyan transition-colors">
                   {item}
                 </a>
               </li>
@@ -62,7 +62,7 @@ export default function Footer() {
           <ul className="space-y-3">
             {["Menus", "Brochures"].map((item) => (
               <li key={item}>
-                <a href="#categories" className="hover:text-[#a78bfa] transition-colors">
+                <a href="#categories" className="hover:text-cyan transition-colors">
                   {item}
                 </a>
               </li>
@@ -75,12 +75,12 @@ export default function Footer() {
           <h3 className="text-white text-base font-bold mb-5">Contact</h3>
           <ul className="space-y-3">
             <li>
-              <a href="mailto:info@creativeprintnj.com" className="hover:text-[#a78bfa] transition-colors">
+              <a href="mailto:info@creativeprintnj.com" className="hover:text-cyan transition-colors">
                 Email Us
               </a>
             </li>
             <li>
-              <a href="tel:+12019122750" className="hover:text-[#a78bfa] transition-colors">
+              <a href="tel:+12019122750" className="hover:text-cyan transition-colors">
                 Call Us
               </a>
             </li>
@@ -89,7 +89,7 @@ export default function Footer() {
                 href="https://www.instagram.com/creativeprintnj/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-[#a78bfa] transition-colors"
+                className="hover:text-cyan transition-colors"
               >
                 Instagram
               </a>

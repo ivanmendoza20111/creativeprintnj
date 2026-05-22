@@ -10,13 +10,13 @@ const items = [
 
 export default function BestSellers() {
   return (
-    <section className="py-20 px-5 bg-[#fafafa] text-center" id="best-sellers">
+    <section className="py-20 px-5 text-center" id="best-sellers">
       <ScrollReveal>
         <div className="max-w-[600px] mx-auto mb-12">
-          <span className="inline-block bg-[rgba(124,58,237,0.08)] text-[#7c3aed] font-semibold text-xs px-3.5 py-1.5 rounded-full tracking-[1.5px] uppercase mb-4">
+          <span className="inline-block bg-[rgba(236,72,153,0.08)] text-pink font-semibold text-xs px-3.5 py-1.5 rounded-full tracking-[1.5px] uppercase mb-4">
             Top Picks
           </span>
-          <h2 className="text-3xl md:text-5xl font-extrabold mb-4">Best Sellers</h2>
+          <h2 className="text-3xl md:text-5xl font-extrabold mb-4 text-navy">Best Sellers</h2>
           <p className="text-base text-[#64748b] leading-relaxed">
             Our most popular products chosen by customers across New Jersey
           </p>
@@ -28,15 +28,15 @@ export default function BestSellers() {
           {items.map((item) => (
             <div
               key={item.name}
-              className="min-w-[280px] max-w-[300px] p-4 rounded-2xl bg-white border border-black/[0.04] cursor-pointer transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+              className="min-w-[280px] max-w-[300px] p-4 rounded-2xl bg-white/70 backdrop-blur-sm border border-white/60 shadow-[0_8px_32px_rgba(6,182,212,0.08)] cursor-pointer transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(236,72,153,0.12)] hover:bg-white/90"
             >
               <img
                 src={asset(item.img)}
                 alt={item.name}
                 className="w-full h-[280px] object-cover rounded-2xl mb-4"
               />
-              <h3 className="text-[17px] font-bold mb-2">{item.name}</h3>
-              <span className="font-bold text-base bg-gradient-to-br from-[#7c3aed] to-[#6366f1] bg-clip-text text-transparent">
+              <h3 className="text-[17px] font-bold mb-2 text-navy">{item.name}</h3>
+              <span className="font-bold text-base bg-gradient-to-r from-cyan via-pink to-orange bg-clip-text text-transparent">
                 {item.price}
               </span>
             </div>

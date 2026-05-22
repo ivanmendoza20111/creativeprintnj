@@ -42,14 +42,14 @@ export default function Categories() {
   const [active, setActive] = useState<TabKey>("cards");
 
   return (
-    <section className="py-20 px-5 bg-[#fafafa] text-center" id="categories">
+    <section className="py-20 px-5 text-center" id="categories">
       <ScrollReveal>
-        <span className="inline-block bg-[rgba(124,58,237,0.08)] text-[#7c3aed] font-semibold text-xs px-3.5 py-1.5 rounded-full tracking-[1.5px] uppercase mb-4">
+        <span className="inline-block bg-[rgba(6,182,212,0.08)] text-cyan font-semibold text-xs px-3.5 py-1.5 rounded-full tracking-[1.5px] uppercase mb-4">
           Our Products
         </span>
-        <h2 className="text-3xl md:text-5xl font-extrabold mb-2 leading-tight">
+        <h2 className="text-3xl md:text-5xl font-extrabold mb-2 leading-tight text-navy">
           Explore our{" "}
-          <span className="bg-gradient-to-br from-[#7c3aed] to-[#6366f1] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-cyan via-pink to-orange bg-clip-text text-transparent">
             Categories
           </span>
         </h2>
@@ -66,8 +66,8 @@ export default function Categories() {
               onClick={() => setActive(tab.key)}
               className={`px-6 py-2.5 rounded-full font-semibold text-sm transition-all cursor-pointer ${
                 active === tab.key
-                  ? "bg-gradient-to-br from-[#7c3aed] to-[#6366f1] text-white shadow-[0_4px_15px_rgba(124,58,237,0.3)]"
-                  : "bg-white text-[#64748b] hover:text-[#7c3aed] hover:bg-[#f5f3ff]"
+                  ? "bg-gradient-to-r from-cyan via-pink to-orange text-white shadow-[0_4px_15px_rgba(6,182,212,0.3)]"
+                  : "bg-white/50 backdrop-blur-sm text-[#64748b] hover:text-cyan hover:bg-white/80"
               }`}
             >
               {tab.label}
@@ -80,7 +80,7 @@ export default function Categories() {
         {products[active].map((product) => (
           <div
             key={product.name}
-            className="bg-white p-4 rounded-2xl border border-black/[0.04] cursor-pointer max-w-[340px] transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+            className="bg-white/70 backdrop-blur-sm p-4 rounded-2xl border border-white/60 shadow-[0_8px_32px_rgba(6,182,212,0.08)] cursor-pointer max-w-[340px] transition-all duration-400 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(236,72,153,0.12)] hover:bg-white/90"
           >
             <img
               src={asset(product.img)}
@@ -88,7 +88,7 @@ export default function Categories() {
               className="w-full max-w-[300px] h-[300px] object-cover rounded-2xl mb-4"
             />
             <p className="text-[#64748b] text-sm mb-1">{product.name}</p>
-            <h3 className="text-lg font-bold text-[#7c3aed]">{product.price}</h3>
+            <h3 className="text-lg font-bold bg-gradient-to-r from-cyan to-pink bg-clip-text text-transparent">{product.price}</h3>
           </div>
         ))}
       </div>
