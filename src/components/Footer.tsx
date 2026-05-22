@@ -9,10 +9,10 @@ export default function Footer() {
         {/* Brand */}
         <div className="text-left max-md:text-center">
           <img
-            src={asset("/img/logo.png")}
+            src={asset("/img/logo.jpeg")}
             alt="CreativePrint NJ Logo"
             width={140}
-            className="rounded-lg mb-5 max-md:mx-auto"
+            className="rounded-xl mb-5 max-md:mx-auto bg-white p-2"
           />
           <p className="leading-relaxed mb-6">
             21-R Monroe Street, Passaic NJ 07055
