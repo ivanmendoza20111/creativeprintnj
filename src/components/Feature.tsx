@@ -1,4 +1,5 @@
 import ScrollReveal from "./ScrollReveal";
+import { asset } from "@/lib/basePath";
 
 export default function Feature() {
   return (
@@ -7,8 +8,8 @@ export default function Feature() {
         <ScrollReveal className="flex-1 relative">
           <div className="absolute w-[200px] h-[200px] bg-[radial-gradient(circle,rgba(6,182,212,0.15),transparent_70%)] -top-10 -left-10 rounded-full" />
           <img
-            src="https://facilprint.com/wp-content/uploads/2025/08/Business-Card-Mockup.png"
-            alt="Business Cards"
+            src={asset("/img/mockup-premium.jpeg")}
+            alt="Premium Business Cards by CreativePrint NJ"
             className="w-full max-w-[520px] rounded-3xl shadow-[0_30px_60px_rgba(0,0,0,0.12)]"
           />
         </ScrollReveal>
